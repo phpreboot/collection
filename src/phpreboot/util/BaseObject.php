@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * This file is part of the PHPReboot/Stopwatch package.
  *
  * Copyright (c) 2016 PHP Reboot, Kapil Sharma <kapil@kapilsharma.info>
@@ -20,5 +20,24 @@ namespace phpreboot\util;
  * @package phpreboot\util
  */
 class BaseObject {
+    /**
+     * Make a clone of self.
+     *
+     * @return BaseObject
+     */
+    public function getClone()
+    {
+        return clone $this;
+    }
 
+    /**
+     * Check if supplied parameter is equal to self.
+     *
+     * @param BaseObject $object
+     * @return bool
+     */
+    public function equals(BaseObject $object)
+    {
+        return $this == $object;
+    }
 }
